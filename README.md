@@ -1,13 +1,11 @@
-# dora55.zama
-# 随机时间戳版本
 git init
-echo "# My Project" >> README.md
-git add README.md
+echo "# My Project" >> http://README.md
+git add http://README.md
 git commit -m "Initial commit"
 
 for i in {1..10}; do
-    echo "Commit $i line" >> README.md
-    git add README.md
+    echo "Commit $i line" >> http://README.md
+    git add http://README.md
     # 生成随机时间（2025年6月内）
     day=$((10 + RANDOM % 10))
     hour=$((RANDOM % 24))
@@ -18,6 +16,3 @@ for i in {1..10}; do
     git commit -m "commit $i"
     echo "提交 $i 时间: $GIT_AUTHOR_DATE"
 done
-
-git remote add origin git@github.com:yourusername/yourrepo.git
-git push -u origin master
